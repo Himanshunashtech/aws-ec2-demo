@@ -1,55 +1,72 @@
- import express, { urlencoded } from 'express'
- import cookieParser from 'cookie-parser'
- import dotenv from 'dotenv'
- import path from 'path'
- import cors from 'cors'
- import { globalErrorHandler } from './utils/errorHandler.js'
- import { connectDB } from './dbconnection/dbConnection.js'
-import dockerRoute from "./routes/userRoutes.js"
-// import requestLogger from './middlewares/loggermiddelware.js'
+import express from 'express';
+import cookieParser from 'cookie-parser';
+import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url'; // Import for ES modules
+import cors from 'cors';
+import { globalErrorHandler } from './utils/errorHandler.js';
+import { connectDB } from './dbconnection/dbConnection.js';
+import dockerRoute from './routes/userRoutes.js';
 
+dotenv.config();
 
- dotenv.config( )
+const app = express();
 
- const app = express()
+const port = process.env.PORT || 3060;
 
- const port = process.env.PORT || 3060
+// Get the directory name of the current module
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-//  app.use(requestLogger);
+app.use(cookieParser());
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
- app.use(cookieParser());
+// Serve static files from the 'views' directory
+app.use(express.static(path.join(__dirname, 'views')));
 
-
-
- app.use(cors())
- app.use(express.json())
- app.use(urlencoded({extended:true}))
- app.use(express.static(path.join('views')));
- 
-   
- app.get('/', (req, res) => {
-    res.sendFile('index.html')
+// Define routes for serving HTML files
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
- app.use("/app",dockerRoute)
 
- app.use(globalErrorHandler)
- 
+app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'about.html'));
+});
+
+app.get('/services', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'services.html'));
+});
+
+app.get('/team', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'team.html'));
+});
+
+app.get('/testimonials', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'testimonials.html'));
+});
 
 
- 
 
- const server = app.listen(port,()=>{
-    console.log(`server is running at ${port}`)
-    connectDB()
- }) 
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'contact.html'));
+});
 
+app.use('/app', dockerRoute);
 
- server.on('error', (error) => {
-   if (error.code === 'EADDRINUSE') {
-       console.error(`Port ${port} is already in use.`);
-       
-       process.exit(1);
-   } else {
-       throw error;
-   }
+app.use(globalErrorHandler);
+
+const server = app.listen(port, () => {
+    console.log(`Server is running at http://localhost:${port}`);
+    connectDB();
+});
+
+server.on('error', (error) => {
+    if (error.code === 'EADDRINUSE') {
+        console.error(`Port ${port} is already in use.`);
+        process.exit(1);
+    } else {
+        throw error;
+    }
 });

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Cloud & ML Solutions Inc.</title>
+    <style>
+        /* Internal CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+        .services-section {
+            padding: 40px 20px;
+            background-color: white;
+        }
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .service-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+        .service-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .service-item h3 {
+            color: #0073e6;
+            margin-top: 15px;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .cta-button:hover {
+            background-color: #005bb5;
+        }
+        footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-links, .footer-contact, .footer-social {
+    margin: 20px;
+    flex: 1;
+}
+
+.footer-links h4, .footer-contact h4, .footer-social h4 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #5e3a9b;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 10px 0;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #dcdcdc;
+}
+
+.footer-contact p, .footer-social a {
+    margin: 10px 0;
+}
+
+.footer-contact a {
+    color: #5e3a9b;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #fff;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    color: #5e3a9b;
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services">Our Services</a></li>
+            <li><a href="/team">Our Team</a></li>
+            <li><a href="/testimonials">Testimonials</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <header>
+        <h1>Our Services</h1>
+        <p>Explore the innovative services we offer at Cloud & ML Solutions Inc.</p>
+    </header>
+
+    <section class="services-section">
+        <div class="services-container">
+            <!-- Service 1 -->
+            <div class="service-item">
+                <img src="https://www.w3schools.com/w3images/cloud.jpg" alt="Cloud Computing">
+                <h3>Cloud Computing</h3>
+                <p>We provide scalable and secure cloud infrastructure to support your business growth. Our cloud migration and management services ensure a seamless transition to the cloud.</p>
+                <a href="#" class="cta-button" id="learnMoreCloud">Learn More</a>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-item">
+                <img src="https://www.w3schools.com/w3images/machine.jpg" alt="Machine Learning">
+                <h3>Machine Learning</h3>
+                <p>Our machine learning solutions leverage cutting-edge algorithms to extract insights from data. We help you build custom ML models to drive innovation and efficiency.</p>
+                <a href="#" class="cta-button" id="learnMoreML">Learn More</a>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-item">
+                <img src="https://www.w3schools.com/w3images/security.jpg" alt="Cloud Security">
+                <h3>Cloud Security</h3>
+                <p>Protect your business with our advanced cloud security solutions. We offer comprehensive security protocols to safeguard your data and infrastructure from potential threats.</p>
+                <a href="#" class="cta-button" id="learnMoreSecurity">Learn More</a>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="service-item">
+                <img src="https://www.w3schools.com/w3images/analytics.jpg" alt="Data Analytics">
+                <h3>Data Analytics</h3>
+                <p>Transform your data into actionable insights with our data analytics services. We offer data visualization, reporting, and predictive analytics to help you make informed decisions.</p>
+                <a href="#" class="cta-button" id="learnMoreAnalytics">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/services">Our Services</a></li>
+                    <li><a href="/team">Our Team</a></li>
+                    <li><a href="/testimonials">Testimonials</a></li>
+                    <li><a href="/faq">FAQs</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:info@cloudmlsolutions.com">info@cloudmlsolutions.com</a></p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <a href="https://twitter.com/yourcompany" target="_blank" class="social-icon twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com/company/yourcompany" target="_blank" class="social-icon linkedin">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://facebook.com/yourcompany" target="_blank" class="social-icon facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com/yourcompany" target="_blank" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Cloud & ML Solutions Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for button interactions
+        document.getElementById('learnMoreCloud').addEventListener('click', function() {
+            alert('Cloud Computing: We offer cloud infrastructure, cloud migration, and ongoing management services.');
+        });
+        document.getElementById('learnMoreML').addEventListener('click', function() {
+            alert('Machine Learning: Our ML models provide data-driven insights to help you grow.');
+        });
+        document.getElementById('learnMoreSecurity').addEventListener('click', function() {
+            alert('Cloud Security: Keep your business safe with our advanced security protocols.');
+        });
+        document.getElementById('learnMoreAnalytics').addEventListener('click', function() {
+            alert('Data Analytics: Unlock the power of data with our advanced analytics services.');
+        });
+    </script>
+</body>
+</html>

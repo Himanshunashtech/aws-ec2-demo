@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Cloud & ML Solutions Inc.</title>
+    <style>
+        /* Internal CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+        .about-section {
+            display: flex;
+            padding: 40px 20px;
+            background-color: white;
+        }
+        .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .about-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+        .about-content {
+            max-width: 600px;
+            margin-left: 20px;
+        }
+        .about-content h2 {
+            margin-top: 0;
+            color: #4CAF50;
+        }
+        .values-section {
+            text-align: center;
+            padding: 40px;
+            background-color: #f9f9f9;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .value-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .value-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .value-item h3 {
+            color: #4CAF50;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+     
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-links, .footer-contact, .footer-social {
+    margin: 20px;
+    flex: 1;
+}
+
+.footer-links h4, .footer-contact h4, .footer-social h4 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #5e3a9b;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 10px 0;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #dcdcdc;
+}
+
+.footer-contact p, .footer-social a {
+    margin: 10px 0;
+}
+
+.footer-contact a {
+    color: #5e3a9b;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #fff;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    color: #5e3a9b;
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services">Our Services</a></li>
+            <li><a href="/team">Our Team</a></li>
+            <li><a href="/testimonials">Testimonials</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <header>
+        <h1>About Us</h1>
+        <p>Learn more about our mission, vision, and the team behind Cloud & ML Solutions Inc.</p>
+    </header>
+
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="https://www.w3schools.com/w3images/teamwork.jpg" alt="Our team working together">
+            </div>
+            <div class="about-content">
+                <h2>Our Mission</h2>
+                <p>At Cloud & ML Solutions Inc., our mission is to empower businesses through innovative cloud and machine learning solutions. We are committed to transforming data into actionable insights, driving growth, and providing exceptional customer service.</p>
+                <h2>Our Vision</h2>
+                <p>We envision a world where cloud and machine learning technologies create smarter, more efficient business environments, enabling innovation at every level.</p>
+                <button class="cta-button" id="learnMoreBtn">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <h2>Our Values</h2>
+        <div class="values-grid">
+            <div class="value-item">
+                <img src="https://www.w3schools.com/w3images/values.jpg" alt="Innovation">
+                <h3>Innovation</h3>
+                <p>We constantly strive to innovate and improve our solutions to stay ahead of industry trends.</p>
+            </div>
+            <div class="value-item">
+                <img src="https://www.w3schools.com/w3images/trust.jpg" alt="Trust">
+                <h3>Trust</h3>
+                <p>We build strong, lasting relationships with our clients through transparency and integrity.</p>
+            </div>
+            <div class="value-item">
+                <img src="https://www.w3schools.com/w3images/excellence.jpg" alt="Excellence">
+                <h3>Excellence</h3>
+                <p>Our goal is to deliver high-quality services that exceed our clients’ expectations.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/services">Our Services</a></li>
+                    <li><a href="/team">Our Team</a></li>
+                    <li><a href="/testimonials">Testimonials</a></li>
+                    <li><a href="/faq">FAQs</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:info@cloudmlsolutions.com">info@cloudmlsolutions.com</a></p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <a href="https://twitter.com/yourcompany" target="_blank" class="social-icon twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com/company/yourcompany" target="_blank" class="social-icon linkedin">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://facebook.com/yourcompany" target="_blank" class="social-icon facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com/yourcompany" target="_blank" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Cloud & ML Solutions Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Basic JavaScript for button interaction
+        document.getElementById('learnMoreBtn').addEventListener('click', function() {
+            alert('Thank you for your interest! Please contact us for more details.');
+        });
+    </script>
+</body>
+</html>

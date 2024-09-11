@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Cloud & ML Solutions Inc.</title>
+    <style>
+        /* Internal CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+        .team-section {
+            padding: 40px 20px;
+            background-color: white;
+        }
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+        .team-member {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .team-member:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .team-member h3 {
+            color: #0073e6;
+            margin-bottom: 5px;
+        }
+        .team-member p {
+            margin: 0;
+            color: #333;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .cta-button:hover {
+            background-color: #005bb5;
+        }
+        footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-links, .footer-contact, .footer-social {
+    margin: 20px;
+    flex: 1;
+}
+
+.footer-links h4, .footer-contact h4, .footer-social h4 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #5e3a9b;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 10px 0;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #dcdcdc;
+}
+
+.footer-contact p, .footer-social a {
+    margin: 10px 0;
+}
+
+.footer-contact a {
+    color: #5e3a9b;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #fff;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    color: #5e3a9b;
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services">Our Services</a></li>
+            <li><a href="/team">Our Team</a></li>
+            <li><a href="/testimonials">Testimonials</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <header>
+        <h1>Meet Our Team</h1>
+        <p>Get to know the professionals behind Cloud & ML Solutions Inc.</p>
+    </header>
+
+    <section class="team-section">
+        <div class="team-container">
+            <!-- Team Member 1 -->
+            <div class="team-member">
+                <img src="https://www.w3schools.com/w3images/team1.jpg" alt="Jane Doe">
+                <h3>Jane Doe</h3>
+                <p>Chief Technology Officer</p>
+                <a href="#" class="cta-button" id="moreJane">More Info</a>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="team-member">
+                <img src="https://www.w3schools.com/w3images/team2.jpg" alt="John Smith">
+                <h3>John Smith</h3>
+                <p>Lead Data Scientist</p>
+                <a href="#" class="cta-button" id="moreJohn">More Info</a>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="team-member">
+                <img src="https://www.w3schools.com/w3images/team3.jpg" alt="Sarah Brown">
+                <h3>Sarah Brown</h3>
+                <p>Senior Cloud Engineer</p>
+                <a href="#" class="cta-button" id="moreSarah">More Info</a>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="team-member">
+                <img src="https://www.w3schools.com/w3images/team4.jpg" alt="Michael Lee">
+                <h3>Michael Lee</h3>
+                <p>Machine Learning Engineer</p>
+                <a href="#" class="cta-button" id="moreMichael">More Info</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/services">Our Services</a></li>
+                    <li><a href="/team">Our Team</a></li>
+                    <li><a href="/testimonials">Testimonials</a></li>
+                    <li><a href="/faq">FAQs</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:info@cloudmlsolutions.com">info@cloudmlsolutions.com</a></p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <a href="https://twitter.com/yourcompany" target="_blank" class="social-icon twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com/company/yourcompany" target="_blank" class="social-icon linkedin">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://facebook.com/yourcompany" target="_blank" class="social-icon facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com/yourcompany" target="_blank" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Cloud & ML Solutions Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for button interactions
+        document.getElementById('moreJane').addEventListener('click', function() {
+            alert('Jane Doe: Chief Technology Officer with 15 years of experience in cloud solutions and tech innovation.');
+        });
+        document.getElementById('moreJohn').addEventListener('click', function() {
+            alert('John Smith: Lead Data Scientist with expertise in data modeling and machine learning algorithms.');
+        });
+        document.getElementById('moreSarah').addEventListener('click', function() {
+            alert('Sarah Brown: Senior Cloud Engineer specialized in infrastructure and cloud security.');
+        });
+        document.getElementById('moreMichael').addEventListener('click', function() {
+            alert('Michael Lee: Machine Learning Engineer focused on building intelligent ML systems.');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - Cloud & ML Solutions Inc.</title>
+    <style>
+        /* Internal CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fc;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        header {
+            background-color: #5e3a9b;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+        .testimonial-section {
+            padding: 40px 20px;
+            background-color: white;
+        }
+        .testimonial-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+        .testimonial {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .testimonial:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+        .testimonial blockquote {
+            font-style: italic;
+            margin: 0;
+            border-left: 4px solid #5e3a9b;
+            padding-left: 15px;
+        }
+        .testimonial p {
+            margin: 10px 0 0;
+            text-align: right;
+            color: #333;
+            font-weight: bold;
+        }
+        footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-links, .footer-contact, .footer-social {
+    margin: 20px;
+    flex: 1;
+}
+
+.footer-links h4, .footer-contact h4, .footer-social h4 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #5e3a9b;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 10px 0;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #dcdcdc;
+}
+
+.footer-contact p, .footer-social a {
+    margin: 10px 0;
+}
+
+.footer-contact a {
+    color: #5e3a9b;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #fff;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    color: #5e3a9b;
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services">Our Services</a></li>
+            <li><a href="/team">Our Team</a></li>
+            <li><a href="/testimonials">Testimonials</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <header>
+        <h1>What Our Clients Say</h1>
+        <p>We value our clients' feedback and their experiences with our services.</p>
+    </header>
+
+    <section class="testimonial-section">
+        <div class="testimonial-container">
+            <!-- Testimonial 1 -->
+            <div class="testimonial">
+                <blockquote>
+                    “Cloud & ML Solutions Inc. helped us move our entire infrastructure to the cloud in record time. Their professionalism and expertise are unmatched.”
+                </blockquote>
+                <p>- Sarah Lee, CEO of Tech Innovators</p>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial">
+                <blockquote>
+                    “The machine learning models they developed for us significantly boosted our business performance. The team is knowledgeable and easy to work with.”
+                </blockquote>
+                <p>- David Brown, CTO of Business Solutions</p>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial">
+                <blockquote>
+                    “We partnered with Cloud & ML Solutions for our cloud migration, and they exceeded all expectations. Their attention to detail was outstanding.”
+                </blockquote>
+                <p>- Emily Clark, Head of IT at InnovateTech</p>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial">
+                <blockquote>
+                    “The level of expertise and support from Cloud & ML Solutions was impressive. Our transition to a cloud-based system was smooth and efficient.”
+                </blockquote>
+                <p>- Michael Johnson, Operations Manager at Global Enterprises</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/services">Our Services</a></li>
+                    <li><a href="/team">Our Team</a></li>
+                    <li><a href="/testimonials">Testimonials</a></li>
+                    <li><a href="/faq">FAQs</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:info@cloudmlsolutions.com">info@cloudmlsolutions.com</a></p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <a href="https://twitter.com/yourcompany" target="_blank" class="social-icon twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com/company/yourcompany" target="_blank" class="social-icon linkedin">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://facebook.com/yourcompany" target="_blank" class="social-icon facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com/yourcompany" target="_blank" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Cloud & ML Solutions Inc. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
