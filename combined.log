@@ -1,0 +1,153 @@
+2024-09-04T12:44:55.928Z [info]: Request: POST /app/convertfile
+2024-09-04T12:44:55.934Z [error]: convertPdfToWord: Invalid file type or no file provided
+2024-09-04T12:47:52.628Z [info]: Request: POST /app/convertfile
+2024-09-04T12:47:52.633Z [error]: convertPdfToWord: Invalid file type or no file provided
+2024-09-04T12:57:03.355Z [info]: Request: POST /app/convertfile
+2024-09-04T12:57:38.970Z [info]: Request: POST /app/convertfile
+2024-09-04T12:58:09.927Z [info]: Request: POST /app/convertfile
+2024-09-04T12:58:52.940Z [info]: Request: POST /app/convertfile
+2024-09-04T12:59:20.439Z [info]: Request: POST /app/convertfile
+2024-09-04T13:00:47.843Z [info]: Request: POST /app/convertfile
+2024-09-04T13:01:19.494Z [info]: Request: POST /app/convertfile
+2024-09-04T13:07:03.738Z [info]: Request: POST /app/convertfile
+2024-09-04T13:11:05.968Z [info]: Request: POST /app/convertfile
+2024-09-04T13:16:19.937Z [info]: Request: POST /app/convertfile
+2024-09-04T13:19:32.511Z [info]: Request: POST /app/convertfile
+2024-09-04T13:25:57.136Z [info]: Request: POST /app/convertfile
+2024-09-05T06:12:09.623Z [info]: Request: POST /app/convertfile
+2024-09-05T06:18:48.103Z [info]: Request: POST /app/convertfile
+2024-09-05T06:22:43.960Z [info]: Request: POST /app/convertfile
+2024-09-05T06:24:58.705Z [info]: Request: POST /app/convertfile
+2024-09-05T06:26:39.720Z [info]: Request: POST /app/convertfile
+2024-09-05T06:28:32.518Z [info]: Request: POST /app/convertfile
+2024-09-05T06:29:44.676Z [info]: Request: POST /app/convertfile
+2024-09-05T06:32:02.127Z [info]: Request: POST /app/convertfile
+2024-09-05T06:35:21.531Z [info]: Request: POST /app/convertfile
+2024-09-05T06:35:21.563Z [error]: convertPdfToWord: Error converting the file
+2024-09-05T06:43:21.400Z [info]: Request: POST /app/convertfile
+2024-09-05T06:43:21.429Z [error]: convertPdfToWord: Error converting the file
+2024-09-05T06:44:51.015Z [info]: Request: POST /app/convertfile
+2024-09-05T06:44:51.045Z [error]: convertPdfToWord: Error downloading the file
+2024-09-05T06:54:37.239Z [info]: Request: POST /app/convertfile
+2024-09-05T06:54:37.271Z [error]: convertPdfToWord: Error downloading the file
+2024-09-05T06:56:04.208Z [info]: Request: POST /app/convertfile
+2024-09-05T06:57:33.334Z [info]: Request: POST /app/convertfile
+2024-09-05T06:58:01.341Z [info]: Request: POST /app/convertfile
+2024-09-05T06:58:46.411Z [info]: Request: POST /app/convertfile
+2024-09-05T07:00:17.860Z [info]: Request: POST /app/convertfile
+2024-09-05T07:11:03.840Z [info]: Request: POST /app/convertfile
+2024-09-05T07:11:23.992Z [info]: Request: POST /app/convertfile
+2024-09-05T09:44:40.576Z [info]: Request: POST /app/addUser
+2024-09-05T09:44:40.600Z [info]: RegisterUser: Attempting to register user with email sonu.hs9557@gmail.com
+2024-09-05T09:44:40.850Z [info]: RegisterUser: User registered successfully with email sonu.hs9557@gmail.com
+2024-09-05T09:46:43.105Z [info]: Request: POST /app/sendOtp
+2024-09-05T09:47:41.312Z [info]: Request: POST /app/sendOtp
+2024-09-05T09:50:03.515Z [info]: Request: POST /app/sendOtp
+2024-09-05T09:52:21.344Z [info]: Request: POST /app/addUser
+2024-09-05T09:52:21.346Z [info]: RegisterUser: Attempting to register user with email at.ajay@yopmail.com
+2024-09-05T09:52:21.571Z [info]: RegisterUser: User registered successfully with email at.ajay@yopmail.com
+2024-09-05T09:52:29.118Z [info]: Request: POST /app/sendOtp
+2024-09-05T09:56:16.478Z [info]: Request: GET /app/getUsers
+2024-09-05T09:56:16.479Z [info]: getAllUsers: Fetching users with pagination: page 1, limit 15
+2024-09-05T09:56:16.556Z [info]: getAllUsers: Users retrieved successfully
+2024-09-05T10:00:04.119Z [info]: Request: POST /app/addUser
+2024-09-05T10:00:04.120Z [info]: RegisterUser: Attempting to register user with email at.ajish0000@gmail.com
+2024-09-05T10:00:04.326Z [info]: RegisterUser: User registered successfully with email at.ajish0000@gmail.com
+2024-09-05T10:00:27.490Z [info]: Request: POST /app/sentOtp
+2024-09-05T10:01:04.097Z [info]: Request: POST /app/sendOtp
+2024-09-05T10:02:32.979Z [info]: Request: POST /app/sendOtp
+2024-09-05T10:05:16.602Z [info]: Request: POST /app/sendOtp
+2024-09-05T10:05:29.215Z [info]: Request: GET /app/getUsers
+2024-09-05T10:05:29.216Z [info]: getAllUsers: Fetching users with pagination: page 1, limit 15
+2024-09-05T10:05:29.286Z [info]: getAllUsers: Users retrieved successfully
+2024-09-05T10:15:41.852Z [info]: Request: POST /app/verifyEmail
+2024-09-05T10:17:56.293Z [info]: Request: POST /app/verifyEmail
+2024-09-05T10:18:47.513Z [info]: Request: POST /app/verifyEmail
+2024-09-05T10:19:08.105Z [info]: Request: POST /app/verifyEmail
+2024-09-05T10:20:00.304Z [info]: Request: POST /app/verifyEmail
+2024-09-05T10:21:12.203Z [info]: Request: POST /app/verifyEmail
+2024-09-05T10:31:50.626Z [info]: Request: GET /app/verifyEmail
+2024-09-05T10:32:10.082Z [info]: Request: GET /app/getUsers
+2024-09-05T10:32:10.083Z [info]: getAllUsers: Fetching users with pagination: page 1, limit 15
+2024-09-05T10:32:10.156Z [info]: getAllUsers: Users retrieved successfully
+2024-09-05T10:38:20.218Z [info]: Request Method: POST
+2024-09-05T10:38:20.221Z [info]: Request URL: /app/verifyEmail
+2024-09-05T10:38:20.221Z [info]: Request Headers: {"content-type":"application/json","user-agent":"PostmanRuntime/7.41.2","accept":"*/*","cache-control":"no-cache","postman-token":"effc11a5-3236-4030-8e1f-98fa4c9e6403","host":"localhost:3030","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"74"}
+2024-09-05T10:38:20.222Z [info]: Request Query: {}
+2024-09-05T10:38:20.222Z [info]: Request Body: undefined
+2024-09-05T10:38:20.246Z [info]: Response Status: 500
+2024-09-05T10:38:20.246Z [info]: Response Body: {"status":"error","message":"An unexpected error occurred"}
+2024-09-05T10:38:20.246Z [info]: Request Duration: 28ms
+2024-09-05T10:38:42.294Z [info]: Request Method: POST
+2024-09-05T10:38:42.294Z [info]: Request URL: /app/verifyEmail
+2024-09-05T10:38:42.294Z [info]: Request Headers: {"content-type":"application/json","user-agent":"PostmanRuntime/7.41.2","accept":"*/*","cache-control":"no-cache","postman-token":"6ecdcfb8-23c4-4e4e-9451-942730b51271","host":"localhost:3030","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"73"}
+2024-09-05T10:38:42.295Z [info]: Request Query: {}
+2024-09-05T10:38:42.295Z [info]: Request Body: undefined
+2024-09-05T10:38:42.340Z [info]: Response Status: 400
+2024-09-05T10:38:42.340Z [info]: Response Body: {"message":"Invalid or expired OTP"}
+2024-09-05T10:38:42.340Z [info]: Request Duration: 46ms
+2024-09-05T10:40:36.453Z [info]: Request Method: POST
+2024-09-05T10:40:36.455Z [info]: Request URL: /app/verifyEmail
+2024-09-05T10:40:36.455Z [info]: Request Query: {}
+2024-09-05T10:40:36.456Z [info]: Request Body: undefined
+2024-09-05T10:40:36.519Z [info]: Response Status: 400
+2024-09-05T10:40:36.519Z [info]: Response Body: {"message":"Invalid or expired OTP"}
+2024-09-05T10:40:36.520Z [info]: Request Duration: 68ms
+2024-09-05T10:41:36.136Z [info]: Request Method: POST
+2024-09-05T10:41:36.137Z [info]: Request URL: /app/verifyEmail
+2024-09-05T10:41:36.137Z [info]: Request Query: {}
+2024-09-05T10:41:36.138Z [info]: Request Body: undefined
+2024-09-05T10:41:36.177Z [info]: Response Status: 400
+2024-09-05T10:41:36.177Z [info]: Response Body: {"message":"Invalid or expired OTP"}
+2024-09-05T10:41:36.177Z [info]: Request Duration: 41ms
+2024-09-05T10:45:21.158Z [info]: Request Method: POST
+2024-09-05T10:45:21.160Z [info]: Request URL: /app/resendOtp
+2024-09-05T10:45:21.161Z [info]: Request Query: {}
+2024-09-05T10:45:21.161Z [info]: Request Body: undefined
+2024-09-05T10:45:24.390Z [info]: Response Status: 200
+2024-09-05T10:45:24.390Z [info]: Response Body: {"success":true,"message":"otp sent successfully","data":null}
+2024-09-05T10:45:24.390Z [info]: Request Duration: 3232ms
+2024-09-05T10:46:33.006Z [info]: Request Method: POST
+2024-09-05T10:46:33.006Z [info]: Request URL: /app/verifyEmail
+2024-09-05T10:46:33.006Z [info]: Request Query: {}
+2024-09-05T10:46:33.007Z [info]: Request Body: undefined
+2024-09-05T10:46:33.104Z [info]: Response Status: 200
+2024-09-05T10:46:33.108Z [info]: Response Body: {"message":"Email verified successfully"}
+2024-09-05T10:46:33.108Z [info]: Request Duration: 102ms
+2024-09-05T10:58:13.743Z [info]: Request Method: POST
+2024-09-05T10:58:13.745Z [info]: Request URL: /app/addUser
+2024-09-05T10:58:13.745Z [info]: Request Query: {}
+2024-09-05T10:58:13.745Z [info]: Request Body: undefined
+2024-09-05T10:58:13.762Z [info]: RegisterUser: Attempting to register user with email davidjohnson76688@gmail.com
+2024-09-05T10:58:14.004Z [info]: RegisterUser: User registered successfully with email davidjohnson76688@gmail.com
+2024-09-05T10:58:14.006Z [info]: Response Status: 201
+2024-09-05T10:58:14.006Z [info]: Response Body: {"success":true,"message":"User registered successfully","data":{"user":{"name":"Ashu","surname":"ssini","email":"davidjohnson76688@gmail.com","password":"$2a$10$SU3/lgKiavN4D.acKBvlveHIMZh9jU99itfAJoCPgDGUjLNY0pey6","phoneNo":8279926471,"role":"User","status":"Active","emailVerified":false,"_id":"66d98ec5efbec9ca0812cc86","loginRecords":[],"createdAt":"2024-09-05T10:58:13.812Z","updatedAt":"2024-09-05T10:58:13.812Z","__v":0}}}
+2024-09-05T10:58:14.006Z [info]: Request Duration: 264ms
+2024-09-05T10:58:32.535Z [info]: Request Method: POST
+2024-09-05T10:58:32.535Z [info]: Request URL: /app/sendOtp
+2024-09-05T10:58:32.536Z [info]: Request Query: {}
+2024-09-05T10:58:32.536Z [info]: Request Body: undefined
+2024-09-05T10:58:32.543Z [info]: Response Status: 500
+2024-09-05T10:58:32.543Z [info]: Response Body: {"status":"error","message":"An unexpected error occurred"}
+2024-09-05T10:58:32.543Z [info]: Request Duration: 8ms
+2024-09-05T10:58:39.765Z [info]: Request Method: POST
+2024-09-05T10:58:39.765Z [info]: Request URL: /app/sendOtp
+2024-09-05T10:58:39.765Z [info]: Request Query: {}
+2024-09-05T10:58:39.766Z [info]: Request Body: undefined
+2024-09-05T10:58:42.753Z [info]: Response Status: 200
+2024-09-05T10:58:42.753Z [info]: Response Body: {"success":true,"message":"otp sent successfully","data":null}
+2024-09-05T10:58:42.753Z [info]: Request Duration: 2988ms
+2024-09-05T10:59:17.368Z [info]: Request Method: POST
+2024-09-05T10:59:17.368Z [info]: Request URL: /app/verifyEmail
+2024-09-05T10:59:17.368Z [info]: Request Query: {}
+2024-09-05T10:59:17.368Z [info]: Request Body: undefined
+2024-09-05T10:59:20.337Z [info]: Response Status: 200
+2024-09-05T10:59:20.337Z [info]: Response Body: {"success":true,"message":"email varified  successfully","data":null}
+2024-09-05T10:59:20.337Z [info]: Request Duration: 2969ms
+2024-09-05T11:00:20.484Z [info]: Request Method: POST
+2024-09-05T11:00:20.484Z [info]: Request URL: /app/verifyEmail
+2024-09-05T11:00:20.484Z [info]: Request Query: {}
+2024-09-05T11:00:20.484Z [info]: Request Body: undefined
+2024-09-05T11:00:20.518Z [info]: Response Status: 400
+2024-09-05T11:00:20.518Z [info]: Response Body: {"status":"fail","message":"invalid or experied otp"}
+2024-09-05T11:00:20.519Z [info]: Request Duration: 35ms

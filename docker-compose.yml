@@ -1,0 +1,29 @@
+version: '3'
+services:
+  app:
+    image: node:latest
+    container_name: node_app
+    working_dir: /home/app
+    ports:
+      - "3030:3030"
+    volumes:
+      - ./:/home/app
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - db
+    command: "npm start"
+  
+  db:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: himanshush9540
+      MONGO_INITDB_ROOT_PASSWORD: ESQPH0Fmy7mNxXmc
+
+volumes:
+  mongo_data:
