@@ -3,10 +3,282 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Express App</title>
+    <title>Cloud & ML Solutions Inc.</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fc;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(to right, rgba(19, 84, 226, 0.8), rgba(61, 133, 198, 0.8)), url('https://www.w3schools.com/w3images/architecture.jpg') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+        }
+        nav {
+            background-color: #252525;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0;
+        }
+        nav ul li a {
+            display: block;
+            padding: 16px 24px;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #1c1c1c;
+            color: #dcdcdc;
+        }
+        main {
+            padding: 160px 20px 20px; /* Adjusted top padding for the larger hero section */
+            max-width: 1200px;
+            margin: auto;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 4em;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+        header p {
+            font-size: 1.5em;
+            margin: 10px 0;
+            font-weight: 300;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #5e3a9b;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #4b2e7e;
+            transform: scale(1.05);
+        }
+        section {
+            margin-bottom: 60px;
+        }
+        h2 {
+            color: #3a5b8c;
+            font-size: 2.5em;
+            border-bottom: 3px solid #3a5b8c;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .service, .team-member, .testimonial, .faq-item {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service:hover, .team-member:hover, .testimonial:hover, .faq-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+        .service img, .team-member img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .service div, .team-member div {
+            padding: 20px;
+        }
+        .service h3, .team-member h3 {
+            color: #3a5b8c;
+            margin-top: 0;
+        }
+        .team-member {
+            display: flex;
+            align-items: center;
+        }
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .testimonial blockquote {
+            margin: 0;
+            font-style: italic;
+            border-left: 4px solid #5e3a9b;
+            padding-left: 20px;
+            color: #333;
+        }
+        .testimonial p {
+            margin: 5px 0;
+            color: #5e3a9b;
+        }
+        .faq-item h3 {
+            margin: 0;
+            color: #3a5b8c;
+            cursor: pointer;
+        }
+        .faq-item p {
+            display: none;
+            margin: 10px 0 0;
+            color: #333;
+        }
+        .faq-item.active p {
+            display: block;
+        }
+        footer {
+            background-color: #252525;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        footer p {
+            margin: 0;
+        }
+        a {
+            color: #5e3a9b;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Express App!</h1>
-    <p>This is a simple HTML page rendered with Express.</p>
+    <header>
+        <h1>Cloud & ML Solutions Inc.</h1>
+        <p>Innovating the Future with Cloud and Machine Learning</p>
+        <a href="#contact" class="cta-button">Get Started</a>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#faq">FAQs</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Cloud & ML Solutions Inc. is a leader in cloud computing and machine learning technologies. Our mission is to provide innovative solutions that empower businesses to harness the full potential of the cloud and machine learning for transformative growth.</p>
+            <img src="https://www.w3schools.com/w3images/architecture.jpg" alt="Cloud and ML Technologies" style="width: 100%; border-radius: 12px;">
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="service">
+                <img src="https://www.w3schools.com/w3images/cloud.jpg" alt="Cloud Services">
+                <div>
+                    <h3>Cloud Computing</h3>
+                    <p>Our cloud computing solutions provide scalable, secure, and cost-effective cloud infrastructure tailored to your business needs. We offer services in cloud migration, management, and optimization.</p>
+                </div>
+            </div>
+            <div class="service">
+                <img src="https://www.w3schools.com/w3images/machine.jpg" alt="Machine Learning">
+                <div>
+                    <h3>Machine Learning</h3>
+                    <p>Unlock the potential of machine learning with our state-of-the-art algorithms and data processing techniques. We create custom ML models and provide data-driven insights to foster innovation.</p>
+                </div>
+            </div>
+        </section>
+        <section id="team">
+            <h2>Meet Our Team</h2>
+            <div class="team-member">
+                <img src="https://www.w3schools.com/w3images/team1.jpg" alt="Team Member 1">
+                <div>
+                    <h3>Jane Doe</h3>
+                    <p>Chief Technology Officer</p>
+                    <p>Jane leads our technology strategy with over 15 years of experience in cloud computing and machine learning.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="https://www.w3schools.com/w3images/team2.jpg" alt="Team Member 2">
+                <div>
+                    <h3>John Smith</h3>
+                    <p>Lead Data Scientist</p>
+                    <p>John specializes in data analysis and machine learning, bringing innovative solutions to our clients.</p>
+                </div>
+            </div>
+        </section>
+        <section id="testimonials">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial">
+                <blockquote>
+                    <p>“Cloud & ML Solutions Inc. transformed our data operations and provided invaluable insights. Their expertise in cloud computing and machine learning is unmatched.”</p>
+                </blockquote>
+                <p>- Sarah Lee, CEO of Tech Innovators</p>
+            </div>
+            <div class="testimonial">
+                <blockquote>
+                    <p>“The team at Cloud & ML Solutions Inc. helped us migrate to the cloud seamlessly and developed custom ML models that significantly improved our business processes.”</p>
+                </blockquote>
+                <p>- David Brown, CTO of Business Solutions</p>
+            </div>
+        </section>
+        <section id="faq">
+            <h2>FAQs</h2>
+            <div class="faq-item">
+                <h3>What is cloud computing?</h3>
+                <p>Cloud computing is the delivery of computing services—such as servers, storage, databases, networking, software, and analytics—over the internet (“the cloud”). It offers faster innovation, flexible resources, and economies of scale.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How can machine learning benefit my business?</h3>
+                <p>Machine learning can provide valuable insights from data, predict trends, and automate processes. This can lead to better decision-making, improved customer experiences, and enhanced efficiency in business operations.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What are the advantages of migrating to the cloud?</h3>
+                <p>Cloud migration can provide numerous benefits, including reduced IT costs, improved scalability, enhanced security, and increased flexibility. It allows businesses to focus on their core competencies while leveraging advanced cloud services.</p>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or would like to learn more about our services, please reach out to us. We’d love to hear from you!</p>
+            <p>Email: <a href="mailto:info@cloudmlsolutions.com">info@cloudmlsolutions.com</a></p>
+            <p>Phone: +1 (123) 456-7890</p>
+            <a href="mailto:info@cloudmlsolutions.com" class="cta-button">Get in Touch</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Cloud & ML Solutions Inc. All rights reserved.</p>
+    </footer>
+    <script>
+        // JavaScript to handle FAQ toggling
+        document.querySelectorAll('.faq-item h3').forEach(item => {
+            item.addEventListener('click', () => {
+                item.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
