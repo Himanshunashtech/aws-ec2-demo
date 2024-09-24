@@ -1,282 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - Cloud & ML Solutions Inc.</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Tooplate">
+    <title>Services | Nova tech</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/tooplate-waso-strategy.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
     <style>
-        /* Internal CSS */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
+        /* Custom CSS Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
-        nav {
-            background-color: #333;
-            color: white;
-            padding: 15px;
-            text-align: center;
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
-        nav ul {
-            list-style: none;
-            padding: 0;
+
+        @keyframes rotateIn {
+            from { transform: rotate(-200deg); opacity: 0; }
+            to { transform: rotate(0); opacity: 1; }
         }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
+
+        /* Animations for various elements */
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
         }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
+
+        .slide-up {
+            animation: slideUp 1s ease-out;
         }
-        header {
-            background-color: #0073e6;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
+
+        .rotate-in {
+            animation: rotateIn 1s ease-out;
         }
-        header h1 {
-            margin: 0;
+
+        .navbar {
+            transition: background-color 0.3s ease;
         }
-        header p {
-            margin-top: 10px;
-            font-size: 1.2rem;
+
+        .navbar.scrolled {
+            background-color: #f8f9fa; /* Change to your desired color */
         }
-        .services-section {
-            padding: 40px 20px;
-            background-color: white;
+
+        .accordion-button {
+            transition: background-color 0.3s ease;
         }
-        .services-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+
+        .accordion-button:not(.collapsed) {
+            background-color: #e9ecef;
         }
-        .service-item {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+
+        .accordion-body {
+            transition: max-height 0.3s ease;
         }
-        .service-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+
+        .accordion-collapse {
+            overflow: hidden;
         }
+
         .service-item img {
-            width: 100%;
-            border-radius: 10px;
+            max-height: 200px;
+            object-fit: cover;
         }
-        .service-item h3 {
-            color: #0073e6;
-            margin-top: 15px;
-        }
-        .cta-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #0073e6;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-        .cta-button:hover {
-            background-color: #005bb5;
-        }
-        footer {
-    background-color: #333;
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-    font-size: 0.9rem;
-}
-
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.footer-links, .footer-contact, .footer-social {
-    margin: 20px;
-    flex: 1;
-}
-
-.footer-links h4, .footer-contact h4, .footer-social h4 {
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-    color: #5e3a9b;
-}
-
-.footer-links ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.footer-links ul li {
-    margin: 10px 0;
-}
-
-.footer-links ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-links ul li a:hover {
-    color: #dcdcdc;
-}
-
-.footer-contact p, .footer-social a {
-    margin: 10px 0;
-}
-
-.footer-contact a {
-    color: #5e3a9b;
-    text-decoration: none;
-}
-
-.footer-contact a:hover {
-    text-decoration: underline;
-}
-
-.footer-social {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.social-icon {
-    display: inline-block;
-    font-size: 1.5rem;
-    color: #fff;
-    transition: color 0.3s, transform 0.3s;
-}
-
-.social-icon:hover {
-    color: #5e3a9b;
-    transform: scale(1.1);
-}
-
-.footer-bottom {
-    margin-top: 20px;
-    font-size: 0.8rem;
-    border-top: 1px solid #444;
-    padding-top: 10px;
-}
     </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/services">Our Services</a></li>
-            <li><a href="/team">Our Team</a></li>
-            <li><a href="/testimonials">Testimonials</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
-    </nav>
-    
-    <header>
-        <h1>Our Services</h1>
-        <p>Explore the innovative services we offer at Cloud & ML Solutions Inc.</p>
+    <header class="site-header">
+        <!-- Header content -->
     </header>
 
-    <section class="services-section">
-        <div class="services-container">
-            <!-- Service 1 -->
-            <div class="service-item">
-                <img src="https://www.w3schools.com/w3images/cloud.jpg" alt="Cloud Computing">
-                <h3>Cloud Computing</h3>
-                <p>We provide scalable and secure cloud infrastructure to support your business growth. Our cloud migration and management services ensure a seamless transition to the cloud.</p>
-                <a href="#" class="cta-button" id="learnMoreCloud">Learn More</a>
+    <nav class="navbar navbar-expand-lg bg-white shadow-lg">
+        <div class="container">
+            <a href="#" class="navbar-brand">Nova<span class="text-danger">tech</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"><small class="small-title"><strong class="text-warning">01</strong></small> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about"><small class="small-title"><strong class="text-warning">02</strong></small> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/services"><small class="small-title"><strong class="text-warning">03</strong></small> Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/projects"><small class="small-title"><strong class="text-warning">04</strong></small> Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact"><small class="small-title"><strong class="text-warning">06</strong></small> Contact</a>
+                    </li>
+                </ul>
             </div>
+        </div>
+    </nav>
 
-            <!-- Service 2 -->
-            <div class="service-item">
-                <img src="https://www.w3schools.com/w3images/machine.jpg" alt="Machine Learning">
-                <h3>Machine Learning</h3>
-                <p>Our machine learning solutions leverage cutting-edge algorithms to extract insights from data. We help you build custom ML models to drive innovation and efficiency.</p>
-                <a href="#" class="cta-button" id="learnMoreML">Learn More</a>
-            </div>
+    <header class="fade-in text-center py-5 bg-light">
+        <div class="container">
+            <h1 class="display-4">Our Services</h1>
+            <p class="lead">Explore the range of services we offer to help your business succeed.</p>
+        </div>
+    </header>
 
-            <!-- Service 3 -->
-            <div class="service-item">
-                <img src="https://www.w3schools.com/w3images/security.jpg" alt="Cloud Security">
-                <h3>Cloud Security</h3>
-                <p>Protect your business with our advanced cloud security solutions. We offer comprehensive security protocols to safeguard your data and infrastructure from potential threats.</p>
-                <a href="#" class="cta-button" id="learnMoreSecurity">Learn More</a>
-            </div>
-
-            <!-- Service 4 -->
-            <div class="service-item">
-                <img src="https://www.w3schools.com/w3images/analytics.jpg" alt="Data Analytics">
-                <h3>Data Analytics</h3>
-                <p>Transform your data into actionable insights with our data analytics services. We offer data visualization, reporting, and predictive analytics to help you make informed decisions.</p>
-                <a href="#" class="cta-button" id="learnMoreAnalytics">Learn More</a>
+    <section class="services slide-up py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="service-item p-4 border rounded">
+                        <img src="https://via.placeholder.com/500" alt="Consulting" class="img-fluid rounded mb-3">
+                        <h3>Consulting</h3>
+                        <p>Our expert consultants provide strategic advice to help you navigate complex technology challenges and opportunities.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="service-item p-4 border rounded">
+                        <img src="https://via.placeholder.com/500" alt="Custom Software Development" class="img-fluid rounded mb-3">
+                        <h3>Custom Software Development</h3>
+                        <p>We create bespoke software solutions tailored to your specific needs, from initial concept through to deployment and support.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="service-item p-4 border rounded">
+                        <img src="https://via.placeholder.com/500" alt="Cloud Solutions" class="img-fluid rounded mb-3">
+                        <h3>Cloud Solutions</h3>
+                        <p>Optimize your operations with our scalable cloud solutions, offering flexibility and efficiency for your business needs.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="service-item p-4 border rounded">
+                        <img src="https://via.placeholder.com/500" alt="Cybersecurity" class="img-fluid rounded mb-3">
+                        <h3>Cybersecurity</h3>
+                        <p>Protect your business from cyber threats with our comprehensive cybersecurity services, including threat assessment and mitigation.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="service-item p-4 border rounded">
+                        <img src="https://via.placeholder.com/500" alt="AI & Machine Learning" class="img-fluid rounded mb-3">
+                        <h3>AI & Machine Learning</h3>
+                        <p>Leverage the power of AI and machine learning to drive innovation and improve decision-making processes in your organization.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="service-item p-4 border rounded">
+                        <img src="https://via.placeholder.com/500" alt="Technical Support" class="img-fluid rounded mb-3">
+                        <h3>Technical Support</h3>
+                        <p>Our dedicated support team is available to assist with any technical issues, ensuring your systems remain operational and efficient.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="/services">Our Services</a></li>
-                    <li><a href="/team">Our Team</a></li>
-                    <li><a href="/testimonials">Testimonials</a></li>
-                    <li><a href="/faq">FAQs</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h4>Contact Us</h4>
-                <p>Email: <a href="mailto:info@cloudmlsolutions.com">info@cloudmlsolutions.com</a></p>
-                <p>Phone: +1 (123) 456-7890</p>
-            </div>
-            <div class="footer-social">
-                <h4>Follow Us</h4>
-                <a href="https://twitter.com/yourcompany" target="_blank" class="social-icon twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://linkedin.com/company/yourcompany" target="_blank" class="social-icon linkedin">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://facebook.com/yourcompany" target="_blank" class="social-icon facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://instagram.com/yourcompany" target="_blank" class="social-icon instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
+    <section class="expertise slide-up py-5">
+        <div class="container">
+            <h2 class="display-5">Our Expertise</h2>
+            <p>At Nova tech, we pride ourselves on our extensive expertise in various technology domains. Here are some key areas where we excel:</p>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="expertise-item p-4 border rounded">
+                        <h4>Innovative Solutions</h4>
+                        <p>We stay ahead of the curve with cutting-edge technology to provide innovative solutions tailored to your needs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="expertise-item p-4 border rounded">
+                        <h4>Industry Experience</h4>
+                        <p>Our team has extensive experience across various industries, ensuring we understand your unique challenges and requirements.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="expertise-item p-4 border rounded">
+                        <h4>Customer-Centric Approach</h4>
+                        <p>We focus on delivering solutions that align with your business goals and provide exceptional customer service throughout the process.</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Cloud & ML Solutions Inc. All rights reserved.</p>
+    </section>
+
+    <section class="contact slide-up py-5">
+        <div class="container">
+            <h2 class="display-5">Get in Touch</h2>
+            <p>If you have any questions about our services or would like to discuss your needs, feel free to contact us. We're here to help!</p>
+            <a href="/contact" class="btn btn-primary">Contact Us</a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <div class="site-footer-wrap d-flex align-items-center">
+                        <p class="copyright-text mb-0 me-4">Copyright © 2036 Nova tech Ltd.</p>
+                        <ul class="social-icon">
+                            <li><a href="https://facebook.com" class="social-icon-link bi-facebook"></a></li>
+                            <li><a href="https://pinterest.com" class="social-icon-link bi-pinterest"></a></li>
+                            <li><a href="https://twitter.com" class="social-icon-link bi-twitter"></a></li>
+                            <li><a href="https://www.youtube.com" class="social-icon-link bi-youtube"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- JS FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+    <script src="js/click-scroll.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-        // JavaScript for button interactions
-        document.getElementById('learnMoreCloud').addEventListener('click', function() {
-            alert('Cloud Computing: We offer cloud infrastructure, cloud migration, and ongoing management services.');
-        });
-        document.getElementById('learnMoreML').addEventListener('click', function() {
-            alert('Machine Learning: Our ML models provide data-driven insights to help you grow.');
-        });
-        document.getElementById('learnMoreSecurity').addEventListener('click', function() {
-            alert('Cloud Security: Keep your business safe with our advanced security protocols.');
-        });
-        document.getElementById('learnMoreAnalytics').addEventListener('click', function() {
-            alert('Data Analytics: Unlock the power of data with our advanced analytics services.');
-        });
+      AOS.init();
+
+      // Add a class to the navbar on scroll
+      window.addEventListener('scroll', function() {
+        var navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
     </script>
 </body>
 </html>

@@ -1,292 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Cloud & ML Solutions Inc.</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Tooplate">
+    <title>About Us | Nova tech</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/tooplate-waso-strategy.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
     <style>
-        /* Internal CSS */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+        /* Custom CSS Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
-        nav {
-            background-color: #333;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
-        header h1 {
-            margin: 0;
-        }
-        header p {
-            margin-top: 10px;
-            font-size: 1.2rem;
-        }
-        .about-section {
-            display: flex;
-            padding: 40px 20px;
-            background-color: white;
-        }
-        .about-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .about-image img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 10px;
-        }
-        .about-content {
-            max-width: 600px;
-            margin-left: 20px;
-        }
-        .about-content h2 {
-            margin-top: 0;
-            color: #4CAF50;
-        }
-        .values-section {
-            text-align: center;
-            padding: 40px;
-            background-color: #f9f9f9;
-        }
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .value-item {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .value-item img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        .value-item h3 {
-            color: #4CAF50;
-            margin-top: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-        }
-        .cta-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        .cta-button:hover {
-            background-color: #45a049;
-        }
-     
 
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 1200px;
-    margin: auto;
-}
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
 
-.footer-links, .footer-contact, .footer-social {
-    margin: 20px;
-    flex: 1;
-}
+        @keyframes rotateIn {
+            from { transform: rotate(-200deg); opacity: 0; }
+            to { transform: rotate(0); opacity: 1; }
+        }
 
-.footer-links h4, .footer-contact h4, .footer-social h4 {
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-    color: #5e3a9b;
-}
+        /* Animations for various elements */
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
 
-.footer-links ul {
-    list-style-type: none;
-    padding: 0;
-}
+        .slide-up {
+            animation: slideUp 1s ease-out;
+        }
 
-.footer-links ul li {
-    margin: 10px 0;
-}
+        .rotate-in {
+            animation: rotateIn 1s ease-out;
+        }
 
-.footer-links ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
+        .navbar {
+            transition: background-color 0.3s ease;
+        }
 
-.footer-links ul li a:hover {
-    color: #dcdcdc;
-}
+        .navbar.scrolled {
+            background-color: #f8f9fa; /* Change to your desired color */
+        }
 
-.footer-contact p, .footer-social a {
-    margin: 10px 0;
-}
+        .accordion-button {
+            transition: background-color 0.3s ease;
+        }
 
-.footer-contact a {
-    color: #5e3a9b;
-    text-decoration: none;
-}
+        .accordion-button:not(.collapsed) {
+            background-color: #e9ecef;
+        }
 
-.footer-contact a:hover {
-    text-decoration: underline;
-}
+        .accordion-body {
+            transition: max-height 0.3s ease;
+        }
 
-.footer-social {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.social-icon {
-    display: inline-block;
-    font-size: 1.5rem;
-    color: #fff;
-    transition: color 0.3s, transform 0.3s;
-}
-
-.social-icon:hover {
-    color: #5e3a9b;
-    transform: scale(1.1);
-}
-
-.footer-bottom {
-    margin-top: 20px;
-    font-size: 0.8rem;
-    border-top: 1px solid #444;
-    padding-top: 10px;
-}
+        .accordion-collapse {
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/services">Our Services</a></li>
-            <li><a href="/team">Our Team</a></li>
-            <li><a href="/testimonials">Testimonials</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
-    </nav>
-    
-    <header>
-        <h1>About Us</h1>
-        <p>Learn more about our mission, vision, and the team behind Cloud & ML Solutions Inc.</p>
+    <header class="site-header">
+        <!-- <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-md-5 col-7">
+                    <p class="text-white mb-0">
+                        <i class="bi-clock site-header-icon me-2"></i>
+                        Mon-Fri 10:00-19:00
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-3 col-5">
+                    <p class="text-white mb-0">
+                        <a href="tel:240-480-9600" class="text-white">
+                            <i class="bi-telephone site-header-icon me-2"></i>
+                            240-480-9600
+                        </a>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-12 ms-auto">
+                    <ul class="social-icon">
+                        <li><a href="https://facebook.com/tooplate" class="social-icon-link bi-facebook"></a></li>
+                        <li><a href="https://pinterest.com/tooplate" class="social-icon-link bi-pinterest"></a></li>
+                        <li><a href="https://twitter.com/minthu" class="social-icon-link bi-twitter"></a></li>
+                        <li><a href="https://www.youtube.com/tooplate" class="social-icon-link bi-youtube"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> -->
     </header>
 
-    <section class="about-section">
-        <div class="about-container">
-            <div class="about-image">
-                <img src="https://www.w3schools.com/w3images/teamwork.jpg" alt="Our team working together">
-            </div>
-            <div class="about-content">
-                <h2>Our Mission</h2>
-                <p>At Cloud & ML Solutions Inc., our mission is to empower businesses through innovative cloud and machine learning solutions. We are committed to transforming data into actionable insights, driving growth, and providing exceptional customer service.</p>
-                <h2>Our Vision</h2>
-                <p>We envision a world where cloud and machine learning technologies create smarter, more efficient business environments, enabling innovation at every level.</p>
-                <button class="cta-button" id="learnMoreBtn">Learn More</button>
-            </div>
-        </div>
-    </section>
-
-    <section class="values-section">
-        <h2>Our Values</h2>
-        <div class="values-grid">
-            <div class="value-item">
-                <img src="https://www.w3schools.com/w3images/values.jpg" alt="Innovation">
-                <h3>Innovation</h3>
-                <p>We constantly strive to innovate and improve our solutions to stay ahead of industry trends.</p>
-            </div>
-            <div class="value-item">
-                <img src="https://www.w3schools.com/w3images/trust.jpg" alt="Trust">
-                <h3>Trust</h3>
-                <p>We build strong, lasting relationships with our clients through transparency and integrity.</p>
-            </div>
-            <div class="value-item">
-                <img src="https://www.w3schools.com/w3images/excellence.jpg" alt="Excellence">
-                <h3>Excellence</h3>
-                <p>Our goal is to deliver high-quality services that exceed our clients’ expectations.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="/services">Our Services</a></li>
-                    <li><a href="/team">Our Team</a></li>
-                    <li><a href="/testimonials">Testimonials</a></li>
-                    <li><a href="/faq">FAQs</a></li>
-                    <li><a href="/contact">Contact</a></li>
+    <nav class="navbar navbar-expand-lg bg-white shadow-lg">
+        <div class="container">
+            <a href="#" class="navbar-brand">Nova<span class="text-danger">tech</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="/"><small class="small-title"><strong class="text-warning">01</strong></small> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/about"><small class="small-title"><strong class="text-warning">02</strong></small> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/services"><small class="small-title"><strong class="text-warning">03</strong></small> Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/projects"><small class="small-title"><strong class="text-warning">04</strong></small> Projects</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact"><small class="small-title"><strong class="text-warning">06</strong></small> Contact</a>
+                    </li>
                 </ul>
             </div>
-            <div class="footer-contact">
-                <h4>Contact Us</h4>
-                <p>Email: <a href="mailto:info@cloudmlsolutions.com">info@cloudmlsolutions.com</a></p>
-                <p>Phone: +1 (123) 456-7890</p>
-            </div>
-            <div class="footer-social">
-                <h4>Follow Us</h4>
-                <a href="https://twitter.com/yourcompany" target="_blank" class="social-icon twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://linkedin.com/company/yourcompany" target="_blank" class="social-icon linkedin">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://facebook.com/yourcompany" target="_blank" class="social-icon facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://instagram.com/yourcompany" target="_blank" class="social-icon instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
+        </div>
+    </nav>
+
+    <header class="fade-in text-center py-5 bg-light">
+        <div class="container">
+            <h1 class="display-4">About Us</h1>
+            <p class="lead">Learn more about our team and what drives us to deliver exceptional tech solutions.</p>
+        </div>
+    </header>
+
+    <section class="about slide-up py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-12 mb-4">
+                    <h2 class="display-5">Who We Are</h2>
+                    <p>Nova tech is a leading technology company specializing in innovative solutions. Our team is dedicated to delivering high-quality products and services that meet the needs of our clients. We are passionate about technology and strive to stay at the forefront of the industry.</p>
+                    <p>Founded in 2020, we have grown rapidly and established ourselves as a trusted partner in the tech world. Our mission is to create value for our clients through cutting-edge technology and exceptional service.</p>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <img src="https://via.placeholder.com/500" alt="Our Team" class="img-fluid rounded rotate-in">
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Cloud & ML Solutions Inc. All rights reserved.</p>
+    </section>
+
+    <section class="gallery slide-up py-5 bg-light">
+        <div class="container">
+            <h2 class="display-5">Our Gallery</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <img src="https://via.placeholder.com/500x300" alt="Gallery Image 1" class="img-fluid rounded">
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <img src="https://via.placeholder.com/500x300" alt="Gallery Image 2" class="img-fluid rounded">
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <img src="https://via.placeholder.com/500x300" alt="Gallery Image 3" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="conferences slide-up py-5">
+        <div class="container">
+            <h2 class="display-5">Conferences & Events</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="conference-item">
+                        <h3>Tech Innovators Summit 2024</h3>
+                        <p>Date: March 10-12, 2024</p>
+                        <p>Location: San Francisco, CA</p>
+                        <p>Join us at the Tech Innovators Summit to learn about the latest advancements in technology and network with industry leaders.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="conference-item">
+                        <h3>Future of Tech Conference</h3>
+                        <p>Date: June 5-7, 2024</p>
+                        <p>Location: New York, NY</p>
+                        <p>Discover the future of technology at our annual conference featuring keynotes from top experts and innovative startups.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="conference-item">
+                        <h3>Global Tech Expo</h3>
+                        <p>Date: September 15-17, 2024</p>
+                        <p>Location: London, UK</p>
+                        <p>Experience cutting-edge technology and connect with a global audience at the Global Tech Expo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials slide-up py-5">
+        <div class="container">
+            <h2 class="display-5">What Our Clients Say</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="testimonial-item p-4 border rounded">
+                        <img src="https://via.placeholder.com/100" alt="Client 1" class="img-fluid rounded-circle mb-3">
+                        <h4>Jane Doe</h4>
+                        <p>"Nova tech's innovative solutions have transformed our business. Their dedication and expertise are unmatched."</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="testimonial-item p-4 border rounded">
+                        <img src="https://via.placeholder.com/100" alt="Client 2" class="img-fluid rounded-circle mb-3">
+                        <h4>John Smith</h4>
+                        <p>"Exceptional service and cutting-edge technology. Nova tech exceeded our expectations and delivered on time."</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="testimonial-item p-4 border rounded">
+                        <img src="https://via.placeholder.com/100" alt="Client 3" class="img-fluid rounded-circle mb-3">
+                        <h4>Emily Johnson</h4>
+                        <p>"A reliable partner for our tech needs. The team at Nova tech is highly skilled and always goes the extra mile."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="client-showcase slide-up py-5 bg-light">
+        <div class="container">
+            <h2 class="display-5">Our Valued Clients</h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-6 mb-4">
+                    <img src="https://via.placeholder.com/150" alt="Client Logo 1" class="img-fluid">
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 mb-4">
+                    <img src="https://via.placeholder.com/150" alt="Client Logo 2" class="img-fluid">
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 mb-4">
+                    <img src="https://via.placeholder.com/150" alt="Client Logo 3" class="img-fluid">
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 mb-4">
+                    <img src="https://via.placeholder.com/150" alt="Client Logo 4" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq slide-up py-5">
+        <div class="container">
+            <h2 class="display-5">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What services does Nova tech offer?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Nova tech offers a range of technology solutions including cloud services, cybersecurity, and AI development.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            How can I get in touch with Nova tech?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            You can reach us via our contact page or email us directly at contact@novatech.com.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Where is Nova tech located?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Our headquarters is located in San Francisco, CA. We also have offices in New York, NY and London, UK.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <div class="site-footer-wrap d-flex align-items-center">
+                        <p class="copyright-text mb-0 me-4">Copyright © 2036 Nova tech Ltd.</p>
+                        <ul class="social-icon">
+                            <li><a href="https://facebook.com" class="social-icon-link bi-facebook"></a></li>
+                            <li><a href="https://pinterest.com" class="social-icon-link bi-pinterest"></a></li>
+                            <li><a href="https://twitter.com" class="social-icon-link bi-twitter"></a></li>
+                            <li><a href="https://www.youtube.com" class="social-icon-link bi-youtube"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- JS FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+    <script src="js/click-scroll.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-        // Basic JavaScript for button interaction
-        document.getElementById('learnMoreBtn').addEventListener('click', function() {
-            alert('Thank you for your interest! Please contact us for more details.');
-        });
+      AOS.init();
+
+      // Add a class to the navbar on scroll
+      window.addEventListener('scroll', function() {
+        var navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
     </script>
 </body>
 </html>

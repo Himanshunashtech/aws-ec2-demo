@@ -1,281 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Cloud & ML Solutions Inc.</title>
-    <style>
-        /* Internal CSS */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f7fc;
-            color: #333;
-        }
-        nav {
-            background-color: #333;
-            padding: 15px;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        header {
-            background-color: #5e3a9b;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
-        header h1 {
-            margin: 0;
-        }
-        header p {
-            margin-top: 10px;
-            font-size: 1.2rem;
-        }
-        .contact-section {
-            padding: 40px 20px;
-            background-color: white;
-        }
-        .contact-container {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: auto;
-            gap: 20px;
-        }
-        .contact-form, .contact-info {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            flex: 1;
-            min-width: 300px;
-        }
-        .contact-form form {
-            display: flex;
-            flex-direction: column;
-        }
-        .contact-form input, .contact-form textarea {
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 1rem;
-        }
-        .contact-form button {
-            background-color: #5e3a9b;
-            color: white;
-            border: none;
-            padding: 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .contact-form button:hover {
-            background-color: #4b2e7e;
-        }
-        .contact-info h3 {
-            margin-top: 0;
-            color: #5e3a9b;
-        }
-        .contact-info p {
-            margin: 10px 0;
-        }
-        footer {
-    background-color: #333;
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-    font-size: 0.9rem;
-}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Tooplate">
+    <title>Nova tech</title>
 
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.footer-links, .footer-contact, .footer-social {
-    margin: 20px;
-    flex: 1;
-}
-
-.footer-links h4, .footer-contact h4, .footer-social h4 {
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-    color: #5e3a9b;
-}
-
-.footer-links ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.footer-links ul li {
-    margin: 10px 0;
-}
-
-.footer-links ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-links ul li a:hover {
-    color: #dcdcdc;
-}
-
-.footer-contact p, .footer-social a {
-    margin: 10px 0;
-}
-
-.footer-contact a {
-    color: #5e3a9b;
-    text-decoration: none;
-}
-
-.footer-contact a:hover {
-    text-decoration: underline;
-}
-
-.footer-social {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.social-icon {
-    display: inline-block;
-    font-size: 1.5rem;
-    color: #fff;
-    transition: color 0.3s, transform 0.3s;
-}
-
-.social-icon:hover {
-    color: #5e3a9b;
-    transform: scale(1.1);
-}
-
-.footer-bottom {
-    margin-top: 20px;
-    font-size: 0.8rem;
-    border-top: 1px solid #444;
-    padding-top: 10px;
-}
-        iframe {
-            width: 100%;
-            height: 300px;
-            border-radius: 10px;
-            border: 0;
-        }
-    </style>
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/tooplate-waso-strategy.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"> <!-- AOS CSS -->
 </head>
 <body>
+    <header class="site-header">
+        <!-- <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-md-5 col-7">
+                    <p class="text-white mb-0">
+                        <i class="bi-clock site-header-icon me-2"></i>
+                        Mon-Fri 10:00-19:00
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-3 col-5">
+                    <p class="text-white mb-0">
+                        <a href="tel:240-480-9600" class="text-white">
+                            <i class="bi-telephone site-header-icon me-2"></i>
+                            240-480-9600
+                        </a>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-12 ms-auto">
+                    <ul class="social-icon">
+                        <li><a href="https://facebook.com/tooplate" class="social-icon-link bi-facebook"></a></li>
+                        <li><a href="https://pinterest.com/tooplate" class="social-icon-link bi-pinterest"></a></li>
+                        <li><a href="https://twitter.com/minthu" class="social-icon-link bi-twitter"></a></li>
+                        <li><a href="https://www.youtube.com/tooplate" class="social-icon-link bi-youtube"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+    </header>
 
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/services">Our Services</a></li>
-            <li><a href="/team">Our Team</a></li>
-            <li><a href="/testimonials">Testimonials</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg bg-white shadow-lg">
+        <div class="container">
+            <a href="#" class="navbar-brand">Nova<span class="text-danger">tech</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="/"><small class="small-title"><strong class="text-warning">01</strong></small> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about"><small class="small-title"><strong class="text-warning">02</strong></small> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/services"><small class="small-title"><strong class="text-warning">03</strong></small> Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="/projects"><small class="small-title"><strong class="text-warning">04</strong></small> Projects</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact"><small class="small-title"><strong class="text-warning">05</strong></small> Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <header>
+    <header data-aos="fade-up">
         <h1>Contact Us</h1>
         <p>We are here to help! Reach out to us via the form below or contact us directly.</p>
     </header>
 
-    <section class="contact-section">
-        <div class="contact-container">
-            <!-- Contact Form -->
-            <div class="contact-form">
-                <h3>Send Us a Message</h3>
-                <form id="contactForm">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
-
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-
-            <!-- Contact Information -->
-            <div class="contact-info">
-                <h3>Our Contact Information</h3>
-                <p><strong>Email:</strong> <a href="mailto:info@cloudmlsolutions.com">info@cloudmlsolutions.com</a></p>
-                <p><strong>Phone:</strong> +1 (123) 456-7890</p>
-                <p><strong>Address:</strong> 123 Cloud St, Suite 100, Tech City, 45678</p>
-                <h3>Our Location</h3>
-                <!-- Embedded Google Maps -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093706!2d144.95373531531662!3d-37.816279979751555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5772da7f4bfbf0!2s123%20Cloud%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sau!4v1600353035759!5m2!1sen!2sau"></iframe>
+    <section class="contact" id="section_5">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f9c10b" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        <div class="contact-container-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-12" data-aos="fade-right">
+                        <form class="custom-form contact-form" id="contactForm" action="" method="post" role="form">
+                            <small class="small-title">Contact <strong class="text-white">05/05</strong></small>
+                            <h2 class="mb-5">Say Hi to us</h2>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required="">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="your@company.com" required="">
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="7" id="message" name="message" placeholder="Message"></textarea>
+                                    <button type="submit" class="form-control">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-6 col-12" data-aos="fade-left">
+                        <div class="contact-thumb">
+                            <div class="contact-info bg-white shadow-lg">
+                                <h4 class="mb-4">Plot No 3 Phase 2 SEZ Noida</h4>
+                                <h4 class="mb-2">
+                                    <a href="tel:9540520779">
+                                        <i class="bi-telephone contact-icon me-2"></i>
+                                        9540520779
+                                    </a>
+                                </h4>
+                                <h5>
+                                    <a href="mailto:info@company.com" class="footer-link">
+                                        <i class="bi-envelope-fill contact-icon me-2"></i>
+                                        info@company.com
+                                    </a>
+                                </h5>
+                                <iframe class="google-map mt-4" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4063.103580426464!2d-83.0264337484065!3d42.33402597908653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2cce05ddf4f1%3A0xcc0559eb3fda00c9!2sDetroit%20Riverwalk%2C%20Detroit%2C%20MI!5e1!3m2!1sen!2sus!4v1657814406289!5m2!1sen!2sus" width="100%" height="300" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="/services">Our Services</a></li>
-                    <li><a href="/team">Our Team</a></li>
-                    <li><a href="/testimonials">Testimonials</a></li>
-                    <li><a href="/faq">FAQs</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
+    <footer class="site-footer" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <div class="site-footer-wrap d-flex align-items-center">
+                        <p class="copyright-text mb-0 me-4">Copyright © 2036 Nova tech Ltd.</p>
+                        <ul class="social-icon">
+                            <li><a href="https://facebook.com" class="social-icon-link bi-facebook"></a></li>
+                            <li><a href="https://pinterest.com" class="social-icon-link bi-pinterest"></a></li>
+                            <li><a href="https://twitter.com" class="social-icon-link bi-twitter"></a></li>
+                            <li><a href="https://www.youtube.com" class="social-icon-link bi-youtube"></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="footer-contact">
-                <h4>Contact Us</h4>
-                <p>Email: <a href="mailto:info@cloudmlsolutions.com">info@cloudmlsolutions.com</a></p>
-                <p>Phone: +1 (123) 456-7890</p>
-            </div>
-            <div class="footer-social">
-                <h4>Follow Us</h4>
-                <a href="https://twitter.com/yourcompany" target="_blank" class="social-icon twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://linkedin.com/company/yourcompany" target="_blank" class="social-icon linkedin">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://facebook.com/yourcompany" target="_blank" class="social-icon facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://instagram.com/yourcompany" target="_blank" class="social-icon instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Cloud & ML Solutions Inc. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- JS FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+    <script src="js/click-scroll.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script> <!-- AOS JS -->
     <script>
+        AOS.init({
+            duration: 1200, // Animation duration in milliseconds
+            easing: 'ease-in-out', // Animation easing function
+        });
+
         // Simple form submission alert
         document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault();
@@ -283,6 +169,5 @@
             document.getElementById('contactForm').reset();
         });
     </script>
-
 </body>
 </html>

@@ -1,4 +1,6 @@
 import express from 'express';
+import  cluster from "cluster"
+import os from "os"
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
 import path from 'path';
@@ -7,10 +9,23 @@ import cors from 'cors';
 import { globalErrorHandler } from './utils/errorHandler.js';
 import { connectDB } from './dbconnection/dbConnection.js';
 import dockerRoute from './routes/userRoutes.js';
+import { router } from './routes/contactRoutes.js';
 
 dotenv.config();
 
-const app = express();
+const cpu = os.cpus().length
+
+if(cluster.isPrimary){
+
+    for (let i=0 ;i<=cpu;i++){
+        cluster.fork()
+    }
+
+
+
+    
+}else{
+    const app = express();
 
 const port = process.env.PORT || 3060;
 
@@ -39,14 +54,15 @@ app.get('/services', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'services.html'));
 });
 
-app.get('/team', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'team.html'));
-});
 
-app.get('/testimonials', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'testimonials.html'));
-});
 
+
+app.get('/projects', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'project-detail.html'));
+});
+app.get('/ourFeatures', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'project-detail.html'));
+});
 
 
 app.get('/contact', (req, res) => {
@@ -54,6 +70,7 @@ app.get('/contact', (req, res) => {
 });
 
 app.use('/app', dockerRoute);
+app.use('/app',router)
 
 app.use(globalErrorHandler);
 
@@ -70,3 +87,6 @@ server.on('error', (error) => {
         throw error;
     }
 });
+}
+
+
